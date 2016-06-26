@@ -33,8 +33,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 
-# Use Devise for registration controll
+# Use Devise, OmniAuth for registration controll
 gem 'devise'
+gem 'omniauth' 
+gem 'omniauth-twitter' 
+gem 'omniauth-facebook'
 
 # Use dotenv for secure code controll
 gem 'dotenv-rails'
