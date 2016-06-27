@@ -42,6 +42,9 @@ gem 'omniauth-facebook'
 # Use dotenv for secure code controll
 gem 'dotenv-rails'
 
+# Use kaminari for page controll
+gem 'kaminari'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
