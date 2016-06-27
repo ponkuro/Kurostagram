@@ -1,0 +1,44 @@
+<div class="container-default">
+  <h2>アカウント設定</h2>
+  <%= devise_error_messages! %>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  
+    <h3>プロフィールの編集</h3>
+
+    <div class="field">
+      <div class="form_label">
+        <span class="mark-red">必須</span>
+        <%= f.label :name, "お名前", autofocus: true %>
+      </div>
+      <%= f.text_field :name, placeholder: "お名前", class: "form_field" %>
+    </div>
+  
+    <div class="field">
+      <div class="form_label">
+        <span class="mark-red">必須</span>
+        <%= f.label :email, "メールアドレス" %>
+      </div>
+      <% if current_user.email.include?("@example.com") %>
+        <%= f.email_field :email, value: "", placeholder: "メールアドレス", class: "form_field" %>
+      <% else %>
+        <%= f.email_field :email, placeholder: "メールアドレス", class: "form_field" %>
+      <% end %>
+    </div>
+  
+    <%= f.submit "上記内容に更新する", class: "form_submit" %>
+  
+  <% end %>
+
+  <div class="leave-form">
+    <h3>アカウントの削除</h3>
+    <p>退会する場合は次のボタンを押して下さい。</p>
+    <div class="btn btn_delete">
+      <a href="<%= registration_url(resource_name) %>" data-method="delete" data-confirm="本当に退会してもよろしいですか？">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <span>退会する</span>
+      </a>
+    </div>
+  </div>
+
+</div>

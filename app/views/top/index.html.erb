@@ -1,2 +1,11 @@
-<h1>Top#index</h1>
-<p>Find me in app/views/top/index.html.erb</p>
+<%= render "shared/navibar" %>
+<% if flash.present? %>
+  <%= render "shared/notice" %>
+<% else %>
+  <% if user_signed_in? %>
+    <%= render "top/user" %>
+  <% else %>
+    <%= render "top/visitor" %>
+  <% end %>
+<% end %>
+<%= render "shared/footer" %>
