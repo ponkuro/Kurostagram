@@ -11,7 +11,14 @@
         <li>
           <div class="form_label">
             <span class="mark-red">必須</span>
-            <%= f.label :email, "メールアドレス", autofocus: true %>
+            <%= f.label :name, "お名前" %>
+          </div>
+          <%= f.text_field :name, placeholder: "お名前",autofocus: true, class: "input_field" %>
+        </li>
+        <li>
+          <div class="form_label">
+            <span class="mark-red">必須</span>
+            <%= f.label :email, "メールアドレス" %>
           </div>
           <% if current_user.email.include?("@example.com") %>
             <%= f.email_field :email, value: "", placeholder: "メールアドレス", class: "input_field" %>
@@ -21,10 +28,13 @@
         </li>
         <li>
           <div class="form_label">
-            <span class="mark-red">必須</span>
-            <%= f.label :name, "お名前" %>
+            <span class="mark-green">任意</span>
+            <%= f.label :image, "プロフィール画像" %>
           </div>
-          <%= f.text_field :name, placeholder: "お名前", class: "input_field" %>
+          <div class="profile_img_area">
+            <%= image_tag profile_image_url(current_user) %>
+            <%= f.file_field :image %>
+          </div>
         </li>
         <li>
           <div class="form_label">

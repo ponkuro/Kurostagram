@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable, :omniauthable, omniauth_providers: [:facebook, :twitter]
-
+  mount_uploader :image, ImageUploader
+  
   ######################################
   ##  ユーザー認証に関連したメソッド  ##
   ######################################

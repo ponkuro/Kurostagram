@@ -36,6 +36,24 @@
     padding: 10px;
 }
 
+.profile_img_area {
+    width: 85%;
+    height: 145px;
+    border: solid 1px #aaaaaa;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 0 auto 20px auto;
+    img {
+        float: left;
+        border-radius: 2px;
+        margin: 0 -120px 0 0;
+    }
+    input {
+        margin: 50px 0 0 0;
+        padding: 0 0 0 140px;
+    }
+}
+
 .form_footer {
     text-decoration: none;
     margin: 20px 0 5px 0;
