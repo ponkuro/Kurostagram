@@ -1,0 +1,47 @@
+<div class="container-default">
+  <h2>アカウント設定</h2>
+  <%= devise_error_messages! %>
+  
+  <div class="form_frame max-wid500">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      
+      <h3>プロフィールの編集</h3>
+      
+      <ul>
+        <li>
+          <div class="form_label">
+            <span class="mark-red">必須</span>
+            <%= f.label :name, "お名前" %>
+          </div>
+          <%= f.text_field :name, placeholder: "お名前", autofocus: true, class: "input_field" %>
+        </li>
+        <li>
+          <div class="form_label">
+            <span class="mark-red">必須</span>
+            <%= f.label :email, "メールアドレス" %>
+          </div>
+          <% if current_user.email.include?("@example.com") %>
+            <%= f.email_field :email, value: "", placeholder: "メールアドレス", class: "input_field" %>
+          <% else %>
+            <%= f.email_field :email, placeholder: "メールアドレス", class: "input_field" %>
+          <% end %>
+        </li>
+        <li>
+          <div class="form_label">
+            <span class="mark-green">任意</span>
+            <%= f.label :image, "プロフィール画像" %>
+          </div>
+          <div class="profile_img_area">
+            <%= image_tag profile_image_url(current_user) %>
+            <%= f.file_field :image %>
+          </div>
+        </li>
+      </ul>
+      <%= f.submit "上記内容に更新する", class: "btn-form_submit" %>
+      
+    <% end %>
+  </div>
+  
+  <%= render partial: 'devise/registrations/leave' %>
+
+</div>

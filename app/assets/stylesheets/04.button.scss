@@ -1,0 +1,111 @@
+.btn {
+    border-radius: 2px;
+    border: solid 1px #aaaaaa;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    background: -webkit-linear-gradient(#ffffff, #e9e9e9);
+    background: -moz-linear-gradient(#ffffff, #e9e9e9);
+    background: -o-linear-gradient(#ffffff, #e9e9e9);
+    background: -ms-linear-gradient(#ffffff, #e9e9e9);
+    background: linear-gradient(#ffffff, #e9e9e9);
+}
+
+
+/*フォーム送信ボタン*/
+.btn-form_submit {
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 12px;
+    background: -webkit-linear-gradient(#ffa443, #ff7400);
+    background: -moz-linear-gradient(#ffa443, #ff7400);
+    background: -o-linear-gradient(#ffa443, #ff7400);
+    background: -ms-linear-gradient(#ffa443, #ff7400);
+    background: linear-gradient(#ffa443, #ff7400);
+}
+
+.btn-form_submit:hover {
+    background: rgba(255,164,57,0.9);
+}
+
+
+/*登録・認証ボタン*/
+.btn-signup {
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 16px;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    display: block;
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    p {
+        padding: 15px 0 15px 15px;
+    }
+}
+
+.btn-signup:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-icon_box {
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 24px;
+    width: 58px;
+    height: 100%;
+    border-right: solid 1px #202f55;
+    box-shadow: 5px 0px 10px -2px rgba(0,0,0,0.5);
+    margin: 0;
+    padding: 15px 0 15px 0;
+}
+
+.btn-facebook {
+    background-color: #305097;
+}
+
+.btn-facebook:hover {
+    background-color: rgba(48,80,151,0.8);
+}
+
+.btn-twitter {
+    background-color: #00aced;
+}
+
+.btn-twitter:hover {
+    background-color: rgba(0,172,237,0.6);
+}
+
+.btn-email {
+    background-color: #b33e5c;
+}
+
+.btn-email:hover {
+    background-color: rgba(179,62,92,0.8);
+}
+
+
+/*設定ボタン*/
+.btn_setting, .btn_delete {
+    display: inline;
+    background: -webkit-linear-gradient(#fffff9, #cccccc);
+    background: -moz-linear-gradient(#fffff9, #cccccc);
+    background: -o-linear-gradient(#fffff9, #cccccc);
+    background: -ms-linear-gradient(#fffff9, #cccccc);
+    background: linear-gradient(#fffff9, #cccccc);
+    text-align: center;
+    margin-right: 15px;
+    padding: 6px 12px;
+    a {
+        color: #3c3c3c;
+        text-decoration: none;
+        i {
+            font-size: 1.1em;
+            margin-right: 2px;
+        }
+    }
+}

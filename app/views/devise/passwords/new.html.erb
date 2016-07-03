@@ -1,0 +1,24 @@
+<%= render "shared/navibar" %>
+<div class="container-main">
+  <div class="container-default">
+  
+    <%= render "shared/notice" %>
+    
+    <h2>パスワードのリセット（再設定）</h2>
+    
+    <div class="form_frame max-wid500">
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <h3>再設定の通知を送る</h3>
+        <%= devise_error_messages! %>
+        <ul>
+          <li>
+            <%= f.email_field :email, autofocus: true, placeholder: "メールアドレス", class: "input_field" %>
+          </li>
+        </ul>
+        <%= f.submit "送信する", class: "btn-form_submit" %>
+      <% end %>
+    </div>
+
+  </div>
+</div>
+<%= render "shared/footer" %>
