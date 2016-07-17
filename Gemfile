@@ -53,6 +53,7 @@ gem 'cloudinary'
 # Use rails_admin for admin controll page
 gem 'therubyracer', platforms: :ruby
 gem 'rails_admin'
+gem 'cancan'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
