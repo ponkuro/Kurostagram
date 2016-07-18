@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  body {
-    background-color: #EFEFEF;
+<style>
+  div.dialog {
     color: #2E2F30;
     text-align: center;
     font-family: arial, sans-serif;
-    margin: 0;
-  }
-
-  div.dialog {
     width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
+    max-width: 60em;
+    margin: 4em auto;
   }
 
   div.dialog > div {
@@ -23,23 +13,30 @@
     border-right-color: #999;
     border-left-color: #999;
     border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
+    border-top: #00A1E9 solid 6px;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
     background-color: white;
-    padding: 7px 12% 0;
+    padding: 7px 0 0;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
 
   h1 {
-    font-size: 100%;
-    color: #730E15;
+    text-align: left;
+    font-size: 150%;
+    color: #4E454A;
     line-height: 1.5em;
+    margin: 20px 0 0 70px;
+  }
+
+  div.dialog p {
+    margin: 30px 0 50px 0;
+    font-size: 300%;
   }
 
   div.dialog > p {
     margin: 0 0 1em;
-    padding: 1em;
+    padding: 1.5em;
     background-color: #F7F7F7;
     border: 1px solid #CCC;
     border-right-color: #999;
@@ -48,20 +45,17 @@
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     border-top-color: #DADADA;
+    font-size: 100%;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
-  </style>
-</head>
+</style>
 
-<body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+<!-- This file lives in public/404.html -->
+<div class="dialog">
+  <div>
+    <h1>ここにページが存在するかと思った？</h1>
+    <p>残念！ <strong>404 Not Found</strong> でした！</p>
   </div>
-</body>
-</html>
+  <p>The requested URL is not found on this server. <a href="/" style="text-decoration: underline">Click here</a> to return home.</p>
+</div>
