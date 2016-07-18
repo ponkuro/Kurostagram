@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       omniauth_callbacks: "users/omniauth_callbacks"
     }
   resources :users, only:[:index,:show]
+  
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'top#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
